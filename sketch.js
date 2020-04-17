@@ -11,14 +11,23 @@ const Engine = Matter.Engine
 
 */
 
+const Engine = Matter.Engine;
+const World= Matter.World;
+const Bodies = Matter.Bodies;
+
 
 var tanker;
-var sBalls, tBalls;
+var CannonBall, ShootBalls;
 
 function setup() {
     //Setup the canvas, the ground, the tanker, the shooting ball and the bubble balls.
      var canvas = createCanvas(780,400);
-     tanker = new Tanker(20,20,50,50);
+    engine = Engine.create();
+    world = engine.world;
+
+    tanker = new Tanker(20,20,50,50);
+    ground = new Ground(600,height,1200,20)
+
 
 }
 
